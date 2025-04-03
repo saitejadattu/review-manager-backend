@@ -1,0 +1,51 @@
+POST http://localhost:5000/user/register
+Content-Type: application/json
+
+{ 
+    "name" : "vamsikrishna", 
+    "email": "vamsikrishna@gmail.com", 
+    "password": "Vamsi@1234"
+}
+
+####
+
+POST http://localhost:5000/user/login
+Content-Type: application/json
+
+{ 
+    "email": "vamsikrishna@gmail.com", 
+    "password": "Vamsi@1234"
+}
+
+####
+GET http://localhost:5000/review/all
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWE3MGM2OTM2YjEyZjZmODcyNzRmNyIsImVtYWlsIjoidmFtc2lrcmlzaG5hQGdtYWlsIiwiaWF0IjoxNzQzNDE3NTQ1fQ.O0_SocLleCYr-eNSwESHqFwNp7kIiykaPIf30kUqA8Y
+
+
+####
+POST http://localhost:5000/review/add
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWE3MGM2OTM2YjEyZjZmODcyNzRmNyIsImVtYWlsIjoidmFtc2lrcmlzaG5hQGdtYWlsIiwiaWF0IjoxNzQzNDE3NTQ1fQ.O0_SocLleCYr-eNSwESHqFwNp7kIiykaPIf30kUqA8Y
+Content-Type: application/json
+
+{
+    "userId" : "67ea3ea7f9542ef91ae3a379",
+    "commentText": "nice product",
+    "rating" : 5,
+    "productId": "vaj678787"
+}
+
+####
+DELETE  http://localhost:5000/review/delete
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWE3MGM2OTM2YjEyZjZmODcyNzRmNyIsImVtYWlsIjoidmFtc2lrcmlzaG5hQGdtYWlsIiwiaWF0IjoxNzQzNDE3NTQ1fQ.O0_SocLleCYr-eNSwESHqFwNp7kIiykaPIf30kUqA8Y
+
+####
+PUT http://localhost:5000/review/update
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWE3MGM2OTM2YjEyZjZmODcyNzRmNyIsImVtYWlsIjoidmFtc2lrcmlzaG5hQGdtYWlsIiwiaWF0IjoxNzQzNDE3NTQ1fQ.O0_SocLleCYr-eNSwESHqFwNp7kIiykaPIf30kUqA8Y
+Content-Type: application/json
+
+{
+    "commentText": "nice product MUsic",
+    "rating" : 5
+}
+
+
