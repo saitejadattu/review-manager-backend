@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const reviewController = {
-    'getAllReviews': async (request, response) => {
+    'getProductReview': async (request, response) => {
         try {
             const reviewList = await Review.find({ productId: request.body.productId })
             response.status(200).send({ reviewList: reviewList })
@@ -14,7 +14,19 @@ const reviewController = {
         }
 
     },
+    'getAllReviews': async (request, response) => {
+        try {
+            const reviewList = await Review.find()
+            response.status(200).send({ reviewList: reviewList })
+        } catch (e) {
+            response.status(500).json({
+                message: e.message
+            })
+        }
+
+    },
     'addReview': async (request, response) => {
+        console.log(request.body)
         try {
             const newComment = await Review(request.body)
             await newComment.save()

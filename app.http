@@ -18,13 +18,21 @@ Content-Type: application/json
 }
 
 ####
-GET http://localhost:5000/review/all
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWE3MGM2OTM2YjEyZjZmODcyNzRmNyIsImVtYWlsIjoidmFtc2lrcmlzaG5hQGdtYWlsIiwiaWF0IjoxNzQzNDE3NTQ1fQ.O0_SocLleCYr-eNSwESHqFwNp7kIiykaPIf30kUqA8Y
+POST http://localhost:5000/review/product-review
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjY4M2U2MDkxNmQ1ZGU5NjQ2ZTRiNyIsImVtYWlsIjoidmFtc2lrcmlzaG5hQGdtYWlsLmNvbSIsImlhdCI6MTc0NDIwODg4NX0.4QutkJJLsphToOx1z5jpnEfKJ5RsG2wg0Gv3J9lhtTw
+Content-Type: application/json
+
+{
+    "productId":"vaj678787"
+}
+
+###
+GET  http://localhost:5000/review/all
 
 
 ####
 POST http://localhost:5000/review/add
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZWE3MGM2OTM2YjEyZjZmODcyNzRmNyIsImVtYWlsIjoidmFtc2lrcmlzaG5hQGdtYWlsIiwiaWF0IjoxNzQzNDE3NTQ1fQ.O0_SocLleCYr-eNSwESHqFwNp7kIiykaPIf30kUqA8Y
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZjY4M2U2MDkxNmQ1ZGU5NjQ2ZTRiNyIsImVtYWlsIjoidmFtc2lrcmlzaG5hQGdtYWlsLmNvbSIsImlhdCI6MTc0NDIwODg4NX0.4QutkJJLsphToOx1z5jpnEfKJ5RsG2wg0Gv3J9lhtTw
 Content-Type: application/json
 
 {
